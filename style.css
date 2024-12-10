@@ -114,7 +114,8 @@ nav ul li a {
 #featured-flavors img {
     width: 100%;
     border-radius: 50%;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border: 5px solid #F9FCE7;
+    box-shadow: 0 4px 6 px rgba(0, 0, 0, 0.1);
 }
 
 #featured-flavors figcaption {
@@ -140,7 +141,7 @@ nav ul li a {
     display: flex;
     flex-direction: column;
     width: 250px;
-    border: 2px solid #C3504D;
+    border: 4px solid #C3504D;
     border-radius: 0;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     overflow: hidden;
@@ -251,41 +252,40 @@ fieldset.flavors input[type="checkbox"] {
     height: 25px;
 }
 
-/* 让输入框变高 */
 input[type="text"],
 input[type="email"],
 input[type="tel"],
 textarea {
     width: 100%;
-    height: 40px; /* 输入框高度 */
-    padding: 10px; /* 内部间距 */
-    font-size: 1rem; /* 调整字体大小 */
-    border-radius: 0; /* 圆角边框 */
-    border: none; /* 边框样式 */
-    box-sizing: border-box; /* 确保内外边距正常计算 */
+    height: 40px;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 0;
+    border: none;
+    box-sizing: border-box;
 }
 
 select {
-    width: 100%; /* 默认填满父容器 */
-    height: 40px; /* 设置高度 */
-    padding: 5px; /* 内部间距 */
-    font-size: 1rem; /* 字体大小 */
-    border-radius: 0px; /* 可选：圆角 */
-    border: 1px solid #ccc; /* 边框样式 */
+    width: 100%;
+    height: 40px;
+    padding: 5px;
+    font-size: 1rem;
+    border-radius: 0px;
+    border: 1px solid #ccc;
 }
 
 button {
-    display: inline-block; /* 确保按钮宽度只适应内容 */
-    padding: 10px 20px; /* 内部间距，控制按钮大小 */
-    font-size: 1rem; /* 字体大小 */
-    color: #C3504D; /* 按钮文字颜色 */
-    background-color: white; /* 按钮背景颜色 */
-    border: 1px solid #C3504D; /* 边框颜色 */
-    border-radius: 5px; /* 圆角边框 */
-    cursor: pointer; /* 鼠标悬停时显示手型 */
-    transition: background-color 0.3s ease; /* 添加悬停效果 */
-    text-align: left; /* 文字居中 */
-    width: auto; /* 自动宽度，根据内容调整 */
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #C3504D;
+    background-color: white;
+    border: 1px solid #C3504D;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: left;
+    width: auto;
 }
 
 button:hover {
@@ -297,69 +297,60 @@ footer {
     padding: 10px 0;
     background-color: #5DA3BC;
     color: white;
-    font-size: 0.8rem;
+    font-size: 1rem;
+    font-style: italic;
 }
 
 .hamburger-menu {
-    display: none; /* 隐藏汉堡菜单 */
+    display: none;
 }
 
-/* 移动端样式 */
-@media screen and (max-width: 375px) {
-    body::after {
-        content: "iPhone 6/7/8 media query triggered!";
-        display: block;
-        position: fixed;
-        top: 10px;
-        left: 10px;
-        background: yellow;
-        color: red;
-        font-size: 14px;
-        padding: 5px;
-    }
-    
-    .container body {
-        background-color: yellow !important;
+@media screen and (max-width: 376px) {
+    html, body {
+        overflow-x: hidden;
+        width: 100%;
+        margin: 0;
+        padding: 0;
     }
 
     html {
-        font-size: 14px; /* 设置为合适的基准大小 */
+        font-size: 14px;
     }
 
-    /* Header */
     header {
         background-color: #C3504D;
         color: white;
-        padding: 10px;
+        padding: 6px 10px;
         display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
     }
 
     header .logo {
-        font-size: 1.2rem; /* 调整 logo 字体大小 */
-        text-align: center;
-        margin: 0 auto;
+        font-size: 1.2rem;
+        margin: 0;
+        max-height: 35px;
+        display: flex;
+        align-items: center;
     }
 
     .hamburger-menu {
         display: flex;
         flex-direction: column;
         gap: 5px;
-        margin-left: 10px;
         cursor: pointer;
+        margin-left: auto;
     }
 
     .hamburger-menu span {
-        width: 25px;
-        height: 3px;
+        width: 40px;
+        height: 4px;
         background-color: white;
     }
 
     nav ul {
         display: none;
-        
     }
 
     nav ul.active {
@@ -377,92 +368,167 @@ footer {
     }
 
     nav ul li a {
-        font-size: 0.9rem; /* 缩小导航字体 */
+        font-size: 0.9rem;
         color: white;
         text-decoration: none;
     }
 
-    /* 标题调整 */
-    #ice-cream-title h1 {
-        font-size: calc(14px + 1vw); /* 大幅缩小 H1 字体 */
+    #ice-cream-title {
         text-align: center;
-        margin-bottom: 10px;
+        padding: 20px 0;
     }
 
-    h2 {
-        font-size: 1.4rem !important; /* 缩小 H2 字体 */
-        text-align: center;
-        margin-bottom: 15px;
-    }
-
-    /* Featured Flavors 调整 */
-    #featured-flavors .flavors {
+    #ice-cream-title .logo-title {
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 10px;
     }
 
+    #ice-cream-title .logo {
+        max-width: 80px;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    #ice-cream-title h1 {
+        font-size: 2.5rem;
+        margin: 0;
+    }
+
+    #featured-flavors h2 {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    #featured-flavors .flavors {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 3px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #featured-flavors figure {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+        margin: 0;
+        padding: 0;
+    }
+
     #featured-flavors figure img {
-        width: 80px;
-        height: 80px;
+        width: 120px;
+        height: 120px;
         border-radius: 50%;
+        border: 5px solid #F9FCE7;
+        box-shadow: 0 4px 6 px rgba(0, 0, 0, 0.1);
     }
 
     #featured-flavors figcaption {
-        font-size: 0.9rem; /* 调整描述文字大小 */
+        font-size: 1.6rem;
+        text-align: center;
+        font-weight: bold;
     }
 
-    /* Locations 调整 */
+    #locations h2 {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
     #locations .articles-container {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 15px;
+        gap: 20px;
     }
 
     #locations article {
-        width: 90%;
-        border: 2px solid #C3504D;
+        width: 85%;
+        border: 4px solid #C3504D;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    #locations article img {
+        width: 100%;
+        height: auto;
+        display: block;
     }
 
     #locations article h3 {
-        font-size: 1.1rem; /* 缩小 H3 字体 */
-        padding: 5px;
+        font-size: 1.5rem;
+        padding: 10px;
+        text-align: left;
+        margin: 0;
     }
 
     #locations article p {
-        font-size: 0.8rem; /* 缩小描述字体 */
-        padding: 5px;
+        font-size: 1rem;
+        line-height:1.2;
+        padding: 10px;
+        text-align: left;
     }
 
-    /* Order Online 表单调整 */
+    #order-online h2 {
+        font-size: 2.5rem;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
     #order-online form {
         display: flex;
         flex-direction: column;
         gap: 10px;
-        width: 90%;
+        width: 80%;
         margin: 0 auto;
+    }
+
+    #order-online fieldset.flavors {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+        padding: 0;
+    }
+
+    #order-online fieldset.flavors label {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 1rem;
+        text-align: left;
+    }
+
+    #order-online fieldset.flavors input[type="checkbox"] {
+        width: 20px;
+        height: 20px;
+        margin: 0;
+        cursor: pointer;
     }
 
     #order-online input,
     #order-online select,
     #order-online button {
         width: 100%;
-        height: 35px; /* 缩小输入框和按钮高度 */
-        font-size: 0.9rem; /* 调整字体大小 */
+        height: 35px;
+        font-size: 1rem;
         padding: 5px;
     }
 
-    /* Footer */
+    #order-online button {
+        font-size: 1rem;
+        font-weight: bold;
+        text-align: center;
+        cursor: pointer;
+    }
+
     footer {
         text-align: center;
         padding: 10px;
         background-color: #5DA3BC;
         color: white;
-        font-size: 0.7rem; /* 缩小 Footer 字体 */
+        font-size: 1rem;
+        font-style: italic;
     }
 }
-
-
-
