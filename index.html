@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Passion+One:wght@700&display=swap" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ice Cream Dreams</title>
+</head>
+
+<body>
+  <header>
+    <div class="logo-title">
+        <img src="images/Ice-Cream-Dreams-Logo-White.png" alt="Ice Cream Dreams Logo White" class="logo">
+    </div>
+
+    <div class="hamburger-menu">☰</div>
+    <nav>
+        <ul>
+            <li><a href="#featured-flavors">Featured Flavors</a></li>
+            <li><a href="#locations">Locations</a></li>
+            <li><a href="#order-online">Order Online</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+  <section id="ice-cream-title" class="title-section">
+    <div class="logo-title">
+        <img src="images/Ice-Cream-Dreams-Logo.png" alt="Ice Cream Dreams Logo" class="logo">
+        <h1>Ice Cream Dreams</h1>
+    </div>
+  </section>
+
+  <section id="featured-flavors">
+    <h2>Featured Flavors</h2>
+    <div class="flavors">
+        <figure>
+            <img src="images/superman.jpg" alt="Superman Flavor">
+            <figcaption>Superman</figcaption>
+        </figure>
+        <figure>
+            <img src="images/pistachio.jpg" alt="Pistachio Flavor">
+            <figcaption>Pistachio</figcaption>
+        </figure>
+        <figure>
+            <img src="images/raspberry.jpg" alt="Raspberry Flavor">
+            <figcaption>Raspberry</figcaption>
+        </figure>
+        <figure>
+            <img src="images/choco-chip.jpg" alt="ChocChip Flavor">
+            <figcaption>ChocChip</figcaption>
+        </figure>
+    </div>
+  </section>
+
+  <section id="locations">
+    <h2>Locations</h2>
+    <div class="articles-container">
+        <article>
+            <img src="images/ice-cream-stand-001.jpg" alt="Orange City Location">
+            <h3>Orange City</h3>
+            <p>1422 Dreamlands Lane<br>Orange City, CA 55555<br><br>555-321-0009<br><br>Open noon - 10 p.m.</p>
+        </article>
+        <article>
+            <img src="images/ice-cream-stand-002.jpg" alt="Sunset Beach Location">
+            <h3>Sunset Beach</h3>
+            <p>1848 Beach Front Drive<br>Sunset Beach, CA 55555<br><br>555-867-5309<br><br>Open 10 a.m. - midnight</p>
+        </article>
+        <article>
+            <img src="images/ice-cream-stand-003.jpg" alt="Cultural District Location">
+            <h3>Cultural District</h3>
+            <p>12 Performance Avenue<br>New York, NY 55555<br><br>555-867-5309<br><br>Open 4 p.m. - 9 p.m.</p>
+        </article>
+        <article>
+            <img src="images/ice-cream-stand-004.jpg" alt="ICD Food Truck Location">
+            <h3>ICD Food Truck</h3>
+            <p>Various Locations<br>Pittsburgh, PA<br><br>Check out Facebook for times and locations!</p>
+        </article>
+    </div>
+  </section>
+
+  <section id="order-online">
+    <h2>Order Online</h2>
+    <form>
+        <div class="form-group">
+            <label for="first-name">First Name</label>
+            <input type="text" id="first-name" name="first-name">
+        </div>
+        <div class="form-group">
+            <label for="last-name">Last Name</label>
+            <input type="text" id="last-name" name="last-name">
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone">
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email">
+        </div>
+
+        <fieldset class="flavors">
+            <legend>I would like to order the following flavors:</legend>
+            <label><input type="checkbox" name="flavors" value="superman"> Superman</label>
+            <label><input type="checkbox" name="flavors" value="pistachio"> Pistachio</label>
+            <label><input type="checkbox" name="flavors" value="raspberry"> Raspberry</label>
+            <label><input type="checkbox" name="flavors" value="chocochip"> ChocoChip</label>
+        </fieldset>
+        
+        
+        <div class="form-group">
+            <label for="pickup-day">Pickup Day</label>
+            <select id="pickup-day" name="pickup-day">
+                <option>Monday</option>
+                <option>Tuesday</option>
+                <option>Wednesday</option>
+                <option>Thursday</option>
+                <option>Friday</option>
+                <option>Saturday</option>
+                <option>Sunday</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="pickup-location">Pickup Location</label>
+            <select id="pickup-location" name="pickup-location">
+                <option>Orange City</option>
+                <option>Sunset Beach</option>
+                <option>Cultural District</option>
+                <option>ICD Food Truck</option>
+            </select>
+        </div>
+        <button type="submit">SUBMIT</button>
+    </form>
+
+      
+  </section>
+
+  <footer>
+    <p>Copyright 2022 - Ice Cream Dreams</p>
+  </footer>
+
+</body>
+</html>
