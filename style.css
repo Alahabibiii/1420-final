@@ -1,0 +1,468 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #FFFFFF;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-family: 'Passion One', cursive;
+    font-weight: bold;
+    color: #C3504D;
+}
+
+h2 {
+    font-family: 'Passion One', cursive;
+    font-weight: bold;
+    color: #C3504D;
+}
+
+h3 {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+header {
+    background-color: #C3504D;
+    color: white;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    margin-left: 20px;
+    max-height: 50px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 50px;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    font-weight: bold;
+}
+
+#ice-cream-title {
+    background-color: #F9FCE7;
+    padding: 40px 0;
+    text-align: center;
+}
+
+#ice-cream-title .logo-title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+#ice-cream-title .logo {
+    max-width: 150px;
+}
+
+#ice-cream-title h1 {
+    font-family: 'Passion One', cursive;
+    font-size: 5.5rem;
+    font-weight: bold;
+    color: #C3504D;
+    margin: 0;
+}
+
+#featured-flavors {
+    background-color: #5DA3BC;
+    color: white;
+    padding: 40px 0;
+}
+
+#featured-flavors .flavors {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+#featured-flavors figure {
+    text-align: center;
+    width: 200px;
+}
+
+#featured-flavors img {
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#featured-flavors figcaption {
+    margin-top: 10px;
+    font-weight: bold;
+    font-family: 'Passion One', cursive;
+    font-size: 1.2rem;
+}
+
+#locations {
+    background-color: #F9FCE7;
+    padding: 40px 0;
+}
+
+#locations .articles-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+#locations article {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    border: 2px solid #C3504D;
+    border-radius: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: left;
+}
+
+#locations article img {
+    max-width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+#locations article h3 {
+    background-color: #C3504D;
+    color: white;
+    text-align: left;
+    padding: 10px;
+    margin: 0;
+    font-family: 'Passion One', cursive;
+    font-size: 1.5rem;
+}
+
+#locations article p {
+    background-color: #F9FCE7;
+    color: #333;
+    padding: 15px;
+    margin: 0;
+    text-align: left;
+    font-size: 0.9rem;
+    line-height: 1;
+}
+
+#featured-flavors h2 {
+    color: white;
+}
+
+#order-online h2 {
+    color: white;
+}
+
+#locations h2 {
+    color: #C3504D;
+}
+
+#featured-flavors h2,
+#locations h2,
+#order-online h2 {
+    font-size: 4rem;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#order-online {
+    background-color: #C3504D;
+    color: white;
+    padding: 40px 0;
+}
+
+#order-online form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#order-online form div {
+    flex: 1 1 45%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#order-online form fieldset {
+    flex: 1 1 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    border: none;
+    margin: 20px 0;
+}
+
+fieldset.flavors {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+fieldset.flavors legend {
+    margin-bottom: 20px;
+}
+
+fieldset.flavors label {
+    flex: 1 1 45%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    font-size: 1rem;
+}
+
+fieldset.flavors input[type="checkbox"] {
+    margin: 0;
+    width: 25px;
+    height: 25px;
+}
+
+/* 让输入框变高 */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 100%;
+    height: 40px; /* 输入框高度 */
+    padding: 10px; /* 内部间距 */
+    font-size: 1rem; /* 调整字体大小 */
+    border-radius: 0; /* 圆角边框 */
+    border: none; /* 边框样式 */
+    box-sizing: border-box; /* 确保内外边距正常计算 */
+}
+
+select {
+    width: 100%; /* 默认填满父容器 */
+    height: 40px; /* 设置高度 */
+    padding: 5px; /* 内部间距 */
+    font-size: 1rem; /* 字体大小 */
+    border-radius: 0px; /* 可选：圆角 */
+    border: 1px solid #ccc; /* 边框样式 */
+}
+
+button {
+    display: inline-block; /* 确保按钮宽度只适应内容 */
+    padding: 10px 20px; /* 内部间距，控制按钮大小 */
+    font-size: 1rem; /* 字体大小 */
+    color: #C3504D; /* 按钮文字颜色 */
+    background-color: white; /* 按钮背景颜色 */
+    border: 1px solid #C3504D; /* 边框颜色 */
+    border-radius: 5px; /* 圆角边框 */
+    cursor: pointer; /* 鼠标悬停时显示手型 */
+    transition: background-color 0.3s ease; /* 添加悬停效果 */
+    text-align: left; /* 文字居中 */
+    width: auto; /* 自动宽度，根据内容调整 */
+}
+
+button:hover {
+    background-color: #F9FCE7;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #5DA3BC;
+    color: white;
+    font-size: 0.8rem;
+}
+
+.hamburger-menu {
+    display: none; /* 隐藏汉堡菜单 */
+}
+
+/* 移动端样式 */
+@media screen and (max-width: 375px) {
+    body::after {
+        content: "iPhone 6/7/8 media query triggered!";
+        display: block;
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        background: yellow;
+        color: red;
+        font-size: 14px;
+        padding: 5px;
+    }
+    
+    .container body {
+        background-color: yellow !important;
+    }
+
+    html {
+        font-size: 14px; /* 设置为合适的基准大小 */
+    }
+
+    /* Header */
+    header {
+        background-color: #C3504D;
+        color: white;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    header .logo {
+        font-size: 1.2rem; /* 调整 logo 字体大小 */
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .hamburger-menu {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        margin-left: 10px;
+        cursor: pointer;
+    }
+
+    .hamburger-menu span {
+        width: 25px;
+        height: 3px;
+        background-color: white;
+    }
+
+    nav ul {
+        display: none;
+        
+    }
+
+    nav ul.active {
+        display: flex;
+        flex-direction: column;
+        background-color: #C3504D;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+        list-style: none;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    nav ul li a {
+        font-size: 0.9rem; /* 缩小导航字体 */
+        color: white;
+        text-decoration: none;
+    }
+
+    /* 标题调整 */
+    #ice-cream-title h1 {
+        font-size: calc(14px + 1vw); /* 大幅缩小 H1 字体 */
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    h2 {
+        font-size: 1.4rem !important; /* 缩小 H2 字体 */
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    /* Featured Flavors 调整 */
+    #featured-flavors .flavors {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    #featured-flavors figure img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+    }
+
+    #featured-flavors figcaption {
+        font-size: 0.9rem; /* 调整描述文字大小 */
+    }
+
+    /* Locations 调整 */
+    #locations .articles-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    #locations article {
+        width: 90%;
+        border: 2px solid #C3504D;
+    }
+
+    #locations article h3 {
+        font-size: 1.1rem; /* 缩小 H3 字体 */
+        padding: 5px;
+    }
+
+    #locations article p {
+        font-size: 0.8rem; /* 缩小描述字体 */
+        padding: 5px;
+    }
+
+    /* Order Online 表单调整 */
+    #order-online form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    #order-online input,
+    #order-online select,
+    #order-online button {
+        width: 100%;
+        height: 35px; /* 缩小输入框和按钮高度 */
+        font-size: 0.9rem; /* 调整字体大小 */
+        padding: 5px;
+    }
+
+    /* Footer */
+    footer {
+        text-align: center;
+        padding: 10px;
+        background-color: #5DA3BC;
+        color: white;
+        font-size: 0.7rem; /* 缩小 Footer 字体 */
+    }
+}
+
+
+
